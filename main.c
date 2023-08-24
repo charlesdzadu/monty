@@ -18,7 +18,10 @@ void initialize_global_var(FILE *f)
 	global_var.buffer = NULL;
 }
 
-
+/**
+ * free_global_var - free global variables
+ * Return: void
+*/
 void free_global_var(void)
 {
 	free_double_linked_list(global_var.head);
@@ -52,8 +55,8 @@ int main(int argc, char *argv[])
 			func = get_correct_opcodes(lns[0]);
 			if (!func)
 			{
-				fprintf(stderr, "L%u: ", global_var.cont);
-				fprintf(stderr, "unknown instruction %s\n", lns[0]);
+				dprintf(2, "L%u: ", global_var.cont);
+				dprintf(2, "unknown instruction %s\n", lns[0]);
 				free_global_var();
 				exit(EXIT_FAILURE);
 			}

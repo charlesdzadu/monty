@@ -16,7 +16,12 @@ void free_double_linked_list(stack_t *head)
 	}
 }
 
-
+/**
+ * add_node_begin - add a node at the beginning of a double linked list
+ * @head: head of the list
+ * @n: value of the node
+ * Return: the address of the new element, or NULL if it failed
+*/
 stack_t *add_node_begin(stack_t **head, const int n)
 {
 	stack_t *new_node;
@@ -26,7 +31,7 @@ stack_t *add_node_begin(stack_t **head, const int n)
 	new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		dprintf(2, "Error: malloc failed\n");
 		free_global_var();
 		exit(EXIT_FAILURE);
 	}
@@ -45,7 +50,12 @@ stack_t *add_node_begin(stack_t **head, const int n)
 	return (*head);
 }
 
-
+/**
+ * add_node_end - add a node at the end of a double linked list
+ * @head: head of the list
+ * @n: value of the node
+ * Return: the address of the new element, or NULL if it failed
+*/
 stack_t *add_node_end(stack_t **head, const int n)
 {
 	stack_t *new_node, *tmp;
@@ -55,7 +65,7 @@ stack_t *add_node_end(stack_t **head, const int n)
 	new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		dprintf(2, "Error: malloc failed\n");
 		free_global_var();
 		exit(EXIT_FAILURE);
 	}

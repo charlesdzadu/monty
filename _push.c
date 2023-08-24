@@ -12,7 +12,7 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (!global_var.arg)
 	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		dprintf(2, "L%u: usage: push integer\n", line_number);
 		free_global_var();
 		exit(EXIT_FAILURE);
 	}
@@ -21,8 +21,8 @@ void _push(stack_t **stack, unsigned int line_number)
 	{
 		if (!isdigit(global_var.arg[i]) && global_var.arg[i] != '-')
 		{
-			fprintf(stderr, "L%u: ", line_number);
-			fprintf(stderr, "usage: push integer\n");
+			dprintf(2, "L%u: ", line_number);
+			dprintf(2, "usage: push integer\n");
 			free_global_var();
 			exit(EXIT_FAILURE);
 		}

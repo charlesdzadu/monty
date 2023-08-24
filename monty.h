@@ -71,10 +71,25 @@ FILE *check_given_file(int argc, char *argv[]);
 void (*get_correct_opcodes(char *opcode))(stack_t **, unsigned int);
 void free_double_linked_list(stack_t *head);
 void nothing(void);
-void _push(stack_t **stack, unsigned int line_number);
 stack_t *add_node_end(stack_t **head, const int n);
 stack_t *add_node_begin(stack_t **head, const int n);
-void _pall(stack_t **stack, unsigned int line_number);
 void free_global_var(void);
+
+/* Opcodes helpers */
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
+void _pchar(stack_t **stack, unsigned int line_number);
+void _pstr(stack_t **stack, unsigned int line_number);
+void _rotl(stack_t **stack, unsigned int line_number);
+void _rotr(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
