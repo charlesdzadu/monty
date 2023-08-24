@@ -42,12 +42,37 @@ typedef struct instruction_s
 } instruction_t;
 
 
+/**
+ * struct globals - Structure of global variables
+ * @lifo: stack or queue
+ * @cont: current line
+ * @arg: second parameter of opcode
+ * @head: head of the stack
+ * @fd: file descriptor of the file
+ * @buffer: input text
+ *
+ * Description: doubly linked list node structure
+ */
+typedef struct globals
+{
+	int lifo;
+	unsigned int cont;
+	char  *arg;
+	stack_t *head;
+	FILE *fd;
+	char *buffer;
+} global_t;
 
+extern global_t global_var;
 
 
 FILE *check_given_file(int argc, char *argv[]);
 void (*get_correct_opcodes(char *opcode))(stack_t **, unsigned int);
-
-
+void free_double_linked_list(stack_t *head);
+void nothing(void);
+void _push(stack_t **stack, unsigned int line_number);
+stack_t *add_node_end(stack_t **head, const int n);
+stack_t *add_node_begin(stack_t **head, const int n);
+void _pall(stack_t **stack, unsigned int line_number)
 
 #endif /* MONTY_H */
