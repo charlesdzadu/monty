@@ -36,7 +36,8 @@ void free_global_var(void)
 int main(int argc, char *argv[])
 {
 	FILE *monty_file;
-	ssize_t read = 0, len = 256;
+	ssize_t read = 0;
+	size_t len = 256;
 	char *lns[2] = {NULL, NULL};
 	void (*func)(stack_t **stack, unsigned int line_number);
 
