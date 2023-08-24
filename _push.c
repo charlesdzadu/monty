@@ -17,7 +17,7 @@ void _push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	for (i = 0; global_var.arg[i]; i++)
+	for (i = 0; global_var.arg[i] != '\0'; i++)
 	{
 		if (!isdigit(global_var.arg[i]) && global_var.arg[i] != '-')
 		{
