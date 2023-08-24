@@ -8,6 +8,8 @@
 void (*get_correct_opcodes(char *opcode))(stack_t **, unsigned int)
 {
 	instruction_t opcodes[] = {
+		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 	int i = 0;
