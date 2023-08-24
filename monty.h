@@ -73,6 +73,6 @@ void nothing(void);
 void _push(stack_t **stack, unsigned int line_number);
 stack_t *add_node_end(stack_t **head, const int n);
 stack_t *add_node_begin(stack_t **head, const int n);
-void _pall(stack_t **stack, unsigned int line_number)
+void _pall(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
