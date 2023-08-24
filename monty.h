@@ -65,7 +65,6 @@ typedef struct globals
 
 extern global_t global_var;
 
-
 FILE *check_given_file(int argc, char *argv[]);
 void (*get_correct_opcodes(char *opcode))(stack_t **, unsigned int);
 void free_double_linked_list(stack_t *head);

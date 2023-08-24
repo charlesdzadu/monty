@@ -63,4 +63,5 @@ int main(int argc, char *argv[])
 		global_var.cont++;
 	}
 	free_global_var();
+	return (0);
 }
